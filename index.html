@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 周报 | 2026-04-18（4.12~4.18）</title>
+<title>Data+AI 全球日报 | 2026-04-29</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -27,8 +27,7 @@
     padding: 20px;
   }
   .container { max-width: 900px; margin: 0 auto; }
-
-  /* Header */
+  
   .header {
     background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
     color: white;
@@ -39,19 +38,7 @@
   }
   .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
   .header .date { font-size: 16px; opacity: 0.9; }
-  .header .focus { margin-top: 12px; font-size: 14px; opacity: 0.85; }
-
-  /* Focus Area Tags */
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-  .tag {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.2);
-    font-size: 13px;
-  }
-
-  /* Summary Box */
+  
   .summary-box {
     background: var(--card-bg);
     border-left: 4px solid var(--accent);
@@ -62,19 +49,18 @@
   }
   .summary-box h2 { font-size: 18px; color: var(--accent); margin-bottom: 16px; }
   .summary-box ol { padding-left: 20px; }
-  .summary-box li { margin-bottom: 10px; font-size: 15px; line-height: 1.7; }
+  .summary-box li { margin-bottom: 10px; font-size: 15px; line-height: 1.6; }
   .summary-box .verdict {
     background: var(--primary-light);
     padding: 14px 18px;
     border-radius: 8px;
-    margin-top: 16px;
-    font-size: 14.5px;
+    margin-top: 18px;
+    font-size: 14px;
     color: var(--primary);
     font-weight: 500;
     line-height: 1.7;
   }
-
-  /* Section */
+  
   .section {
     background: var(--card-bg);
     border-radius: 12px;
@@ -100,6 +86,7 @@
     font-weight: 700;
     font-size: 14px;
     color: white;
+    flex-shrink: 0;
   }
   .badge-a { background: var(--accent); }
   .badge-b { background: var(--primary); }
@@ -107,8 +94,7 @@
   .badge-d { background: var(--purple); }
   .badge-e { background: var(--orange); }
   .section-header h2 { font-size: 18px; font-weight: 600; }
-
-  /* Item */
+  
   .item {
     padding: 18px 0;
     border-bottom: 1px solid #f0f0f0;
@@ -121,7 +107,20 @@
     color: var(--text);
     line-height: 1.5;
   }
-  .item h3 .emoji { margin-right: 6px; }
+  .item .meta {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .item .meta .tag {
+    background: #e8eaed;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
   .item .source {
     font-size: 13px;
     color: var(--text-secondary);
@@ -129,68 +128,63 @@
   }
   .item .source a { color: var(--primary); text-decoration: none; word-break: break-all; }
   .item .source a:hover { text-decoration: underline; }
-  .item .body { font-size: 14px; line-height: 1.75; color: #3c4043; }
+  .item .body { font-size: 14px; line-height: 1.8; color: #3c4043; }
   .item .impact {
-    background: #f0f7ff;
+    background: linear-gradient(135deg, #e8f4fd 0%, #f0f7ff 100%);
     padding: 12px 16px;
     border-radius: 8px;
     margin-top: 12px;
-    font-size: 13.5px;
-    color: #1a56db;
-    line-height: 1.7;
+    font-size: 13px;
+    color: #1558b0;
+    border-left: 3px solid var(--primary);
+    line-height: 1.6;
   }
-  .item .impact strong { color: #0d47a1; }
-
-  /* Speed Table */
-  .speed-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 8px;
+  .item-empty {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-secondary);
     font-size: 14px;
+    font-style: italic;
   }
-  .speed-table th {
-    text-align: left;
-    padding: 10px 12px;
-    background: #f8f9fa;
-    border-bottom: 2px solid var(--border);
+
+  /* Type tags for Section D */
+  .type-tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
     font-weight: 600;
-    color: var(--text);
+    margin-right: 6px;
   }
-  .speed-table td {
-    padding: 12px;
-    border-bottom: 1px solid #f0f0f0;
-    vertical-align: top;
-    line-height: 1.65;
-  }
+  .tag-funding { background: #fef7e0; color: #b06000; }
+  .tag-earnings { background: #e6f4ea; color: #137333; }
+  .tag-ipo { background: #fce8e6; color: #c5221f; }
+  .tag-ma { background: #e8f0fe; color: #1967d2; }
 
-  /* Watchlist */
-  .watch-item {
-    padding: 12px 16px;
-    background: #fffbe6;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    border-left: 3px solid var(--orange);
+  /* Watchlist type tags */
+  .wl-type {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
   }
-  .watch-item:last-child { margin-bottom: 0; }
+  .wl-preview { background: #fff3e0; color: #e65100; }
+  .wl-downgrade { background: #f3e5f5; color: #7b1fa2; }
+  .wl-track { background: #e0f2f1; color: #00695c; }
 
-  /* Footer */
   .footer {
     text-align: center;
     padding: 24px;
     font-size: 12px;
     color: var(--text-secondary);
-    margin-top: 8px;
   }
-
-  /* Responsive */
+  
   @media (max-width: 640px) {
     body { padding: 12px; }
     .header { padding: 24px; }
     .header h1 { font-size: 22px; }
     .section, .summary-box { padding: 20px; }
-    .speed-table { font-size: 12px; }
-    .speed-table th, .speed-table td { padding: 8px; }
   }
 </style>
 </head>
@@ -198,146 +192,237 @@
 <div class="container">
 
   <div class="header">
-    <h1>📊 AI 周报 | 2026-04-18</h1>
-    <div class="date">📅 覆盖周期：2026-04-12 ~ 2026-04-18（周六）</div>
-    <div class="focus">
-      <b>聚焦领域：</b>
-      <div class="tags">
-        <span class="tag">🤖 AI Coding / 编程助手</span>
-        <span class="tag">🧠 智能体 / Agent</span>
-        <span class="tag">⚙️ Harness Engineering</span>
-        <span class="tag">📐 上下文窗口 / 长文本</span>
-      </div>
-    </div>
+    <h1>📊 Data+AI 全球日报</h1>
+    <div class="date">2026-04-29（周三） · 时效窗口：4月28日 08:00 — 4月29日 08:00 CST</div>
   </div>
 
-  <!-- Top Signals -->
+  <!-- Summary -->
   <div class="summary-box">
-    <h2>🔥 本周最值得关注的 5 条动态</h2>
+    <h2>🔥 今日最重要的3个变化方向</h2>
+    <ol>
+      <li><strong>云 AI 排他时代终结</strong> — 微软与 OpenAI 解除独家绑定，企业级 AI 部署将不再被单一云厂商锁定，跨云多模型架构成为可行选项</li>
+      <li><strong>数据平台 → 行动系统</strong> — Google 宣示 Agentic Data Cloud 战略，Databricks 同步推进 Supervisor API，数据平台正从被动查询工具演变为 AI Agent 的执行层</li>
+      <li><strong>数据要素政策红利释放</strong> — 国家数据局启动第二届"数据要素×"大赛，首次设立"数据基础设施"专项赛道，下半年有望迎来政策性采购高峰</li>
+    </ol>
+    <div class="verdict">
+      <strong>总判断：</strong>本周是数据平台行业的关键转折点。微软-OpenAI 合作重构意味着云 AI 市场进入"多伙伴时代"，Google Agentic Data Cloud 和 Databricks Agent 能力升级共同指向同一个方向——<strong>Agent 编排能力和跨云互操作能力将成为新的核心竞争力</strong>。国内方面，数据要素大赛释放明确的基建投资信号，建议关注城市治理/医疗健康/数据基础设施三个赛道的项目机会。
+    </div>
+  </div>
 
-    <!-- Item 1 -->
+  <!-- Section A -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-a">A</span>
+      <h2>Top Signals · 核心事件</h2>
+    </div>
+
     <div class="item">
-      <h3><span class="emoji">1.</span> 🔥 OpenAI Codex 重大升级：桌面控制 + 多 Agent 并行，正面硬刚 Claude Code</h3>
-      <div class="source"><strong>来源：</strong><a href="https://techcrunch.com/2026/04/16/openai-takes-aim-at-anthropic-with-beefed-up-codex-that-gives-it-more-power-over-your-desktop/" target="_blank">TechCrunch</a> · 2026-04-16</div>
+      <h3>1. 微软与 OpenAI 重构合作关系，终结排他性条款</h3>
+      <div class="meta">
+        <span class="tag">🔴 战略级</span>
+        <span class="tag">📅 2026-04-27 发布</span>
+      </div>
+      <div class="source">
+        📎 一手来源：<a href="https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/" target="_blank">Microsoft Official Blog</a> | 
+        <a href="https://www.cnbc.com/2026/04/27/openai-microsoft-partnership-revenue-cap.html" target="_blank">CNBC 报道</a> | 
+        <a href="https://arstechnica.com/ai/2026/04/no-longer-exclusive-microsoft-agrees-to-let-openai-see-other-cloud-providers/" target="_blank">Ars Technica 分析</a>
+      </div>
       <div class="body">
-        OpenAI 发布 Codex 史诗级更新——支持在 Mac 后台运行、模拟鼠标/键盘操控任意桌面应用、多 Agent 并行工作不干扰用户操作，还新增内置浏览器、记忆功能（预览版）、图像生成能力以及 111 个插件集成（含 Slack/Google Calendar 等办公自动化）。企业版新增按需付费模式。
+        微软和 OpenAI 于4月27日联合宣布修订合作协议，核心变化包括：
+        <br><br>
+        <strong>① 排他性解除：</strong>OpenAI 不再绑定 Azure 作为唯一云服务商——微软的 IP 许可证变为<strong>非独占性质</strong>至2032年，OpenAI 可向任何主流云厂商提供模型服务。<br>
+        <strong>② 收入分成逆转：</strong>微软<strong>不再</strong>向 OpenAI 支付收入分成；反之 OpenAI 向微软支付至2030年（设总上限）。<br>
+        <strong>③ AGI 条款移除：</strong>从公开文本中移除通用人工智能触发条件相关条款。<br>
+        <strong>④ 首发权保留：</strong>微软仍是 OpenAI "主要云合作伙伴"，OpenAI 产品仍优先在 Azure 首发。
       </div>
       <div class="impact">
-        <strong>💡 为什么重要：</strong>这是 AI Coding Agent 从 IDE 走向全桌面控制的标志性事件。Codex 不再只是"编程助手"，而是变成了能操作整个电脑的通用 Agent。<strong>直接对标 Claude Code 的远程桌面控制能力</strong>，OpenAI 与 Anthropic 在 AI 编程赛道的竞争白热化。多 Agent 并行 + 桌面控制 = 企业级自动化的新范式。
+        <strong>📈 对数据平台的影响：</strong>这是自2019年双方建立合作以来最重大的结构性调整。短期影响有限（Azure 仍为首选首发平台），但中长期意味着 OpenAI 模型可通过 AWS/GCP 等其他渠道获取，跨云部署 AI 工作负载成为现实。Databricks 已率先响应——其 Mosaic AI Model Serving 在4月24日即上线 GPT-5.5 托管服务。
       </div>
     </div>
 
-    <!-- Item 2 -->
     <div class="item">
-      <h3><span class="emoji">2.</span> 🧩 OpenAI 发布官方 Codex MCP 插件 —— Claude Code 用户可直接调用 GPT-4o</h3>
-      <div class="source"><strong>来源：</strong><a href="https://cloud.tencent.com/developer/article/2654895" target="_blank">腾讯云开发者社区</a> · 2026-04-14</div>
+      <h3>2. Google Cloud Next '26 发布 Agentic Data Cloud，数据平台进入 Agent 时代</h3>
+      <div class="meta">
+        <span class="tag">🔴 产品战略</span>
+        <span class="tag">📅 2026-04-22~24 大会期间发布</span>
+      </div>
+      <div class="source">
+        📎 一手来源：<a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/next-2026/" target="_blank">Google Cloud Blog 总览</a> | 
+        <a href="https://cloud.google.com/blog/products/data-analytics/whats-new-in-the-agentic-data-cloud" target="_blank">Agentic Data Cloud 详细公告</a>
+      </div>
       <div class="body">
-        OpenAI 推出官方 <code>@anthropic-ai/codex-mcp</code> 插件，让 Claude Code 用户只需三条命令即可在 Claude Code 中调用 Codex（基于 GPT-4o）。核心亮点是<strong>"对抗性代码审查"</strong>模式——让 Codex 扮演挑刺者角色，对 Claude 生成的代码做压力测试和边缘 Bug 分析。支持免费 ChatGPT 账号。<br><br>
-        <strong>推荐工作流：</strong>Claude Code 规划/初建 → Codex 执行/对抗审查 → 反馈回 Claude Code 修复
+        在 Las Vegas 举办的 Cloud Next '26 上，Google 正式发布 <strong>Agentic Data Cloud</strong> 战略愿景及产品矩阵：<br><br>
+        <strong>🏗️ BigQuery 性能与成本：</strong>流体自动扩缩容平均降低 <strong>34%</strong> 查询成本；新增 Measures 语义层（预览版）<br>
+        <strong>🤖 Data Agent Kit（预览版）：</strong>在 VS Code / Claude Code / Gemini CLI 等 IDE 中编排数据工程/科学/治理类 Agent<br>
+        <strong>🔧 四大内置专用 Agent：</strong>Data Engineering Agent（GA）、Data Science Agent（GA）、Database Observability Agent（预览版）、Deep Research Agent（预览版）<br>
+        <strong>📚 Knowledge Catalog：</strong>Dataplex Catalog 演进版，聚合跨平台元数据（SAP/Salesforce/ServiceNow），Gemini 自动补全 Schema<br>
+        <strong>🌐 开放联邦查询：</strong>可直接读取 Databricks Unity Catalog、Snowflake Polaris、AWS Glue 目录（均预览版）<br>
+        <strong>🔌 MCP 协议全面支持：</strong>BigQuery/Spanner/Looker 等核心引擎提供 MCP 接口
       </div>
       <div class="impact">
-        <strong>💡 为什么重要：</strong><strong>跨模型协作成为现实</strong>——不再是"选 A 还是选 B"，而是"A+B 组合拳"。MCP 协议正在成为 AI 工具互操作的标准层，插件生态爆发式增长。"对抗性审查"模式是工程化落地的新思路。
+        <strong>📈 对数据平台的影响：</strong>行业头部玩家首次将"Agent Scale"而非"Human Scale"作为架构设计目标。Data Agent Kit 直接对标 Databricks Mosaic AI Agent Framework；开放联邦查询 + MCP 在 Iceberg 标准之上进一步降低跨云门槛。BigQuery 从数据仓库进化为"行动系统"，对 Snowflake/Databricks 构成直接竞争压力。
       </div>
     </div>
 
-    <!-- Item 3 -->
     <div class="item">
-      <h3><span class="emoji">3.</span> 🏛️ MCP Dev Summit 北美 2026：1200 人到场，Uber 每周万次 Agent 落地验证</h3>
-      <div class="source"><strong>来源：</strong><a href="https://news.cocoloop.cn/2026/04/mcp-summit-enterprise-gateway/" target="_blank">Cocoloop News</a> / <a href="https://events.linuxfoundation.org/mcp-dev-summit-north-america/" target="_blank">Linux Foundation Events</a> · 2026-04-02~04-10</div>
+      <h3>3. 国家数据局启动 2026 年"数据要素×"大赛，设 17 个赛道含数据基础设施专项</h3>
+      <div class="meta">
+        <span class="tag">🟡 政策驱动</span>
+        <span class="tag">📅 2026-04-27 发布</span>
+      </div>
+      <div class="source">
+        📎 来源：<a href="https://news.qq.com/rain/a/20260428A065C000" target="_blank">国家数据局通知（腾讯新闻转载）</a>
+      </div>
       <div class="body">
-        4 月 2-3 日纽约举办的首届 MCP Dev Summit 吸引 <strong>1200 人到场、95+ 议题</strong>。核心看点：<br>
-        • <strong>SEP-1442 架构变革</strong>：MCP 从有状态会话架构改为无状态请求架构，解决企业长连接运维痛点<br>
-        • <strong>Uber 案例</strong>：自建 MCP Gateway + Registry，统一暴露内部 Thrift/Protobuf/HTTP 接口给 AI Agent，<strong>每周数万次 Agent 调用</strong>，Gateway 层做 PII 脱敏<br>
-        • <strong>亚马逊案例</strong>：将 MCP 工具/SOP 打包成可复用配置模块<br>
-        • MCP SDK 月下载量超 <strong>9700 万次</strong>，AAIF 会员超 100 家
+        国家数据局联合住建部等部委于4月27日发布通知，启动 2026 年"数据要素×"大赛。<br><br>
+        <strong>🏆 赛事主题：</strong>"<strong>数据赋能 乘数而上</strong>"<br>
+        <strong>📋 赛道设置：</strong>16 个行业赛道 + 1 个专业赛道（<strong style="color:#ea4335;">数据基础设施</strong>）<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;行业赛道覆盖：工业制造 / 现代农业 / 商贸流通 / 交通运输 / 金融服务 / 科技创新 / 医疗健康 / 医疗保障 / 应急管理 / 气象服务 / 城市治理 / 绿色低碳 / 人力资源 / 体育发展 / 文物保护利用 / 中医药<br>
+        <strong>🏗️ 赛制安排：</strong>地方分赛 → 全国总决赛<br>
+        <strong>💡 重点关联：</strong>城市治理赛道明确提及 CIM（城市信息模型）平台深度结合，获奖项目可优先纳入住建部 CIM 平台应用案例库
       </div>
       <div class="impact">
-        <strong>💡 为什么重要：</strong>MCP 已从实验玩具进化为企业级工程标准。"Gateway 集中管控 + Registry 工具目录"模式被大厂一致采用。Uber 的万次级生产验证说明 <strong>Agent 在企业内部的规模化落地已经可行</strong>。无状态化改造 (SEP-1442) 为微服务环境下的 Agent 部署铺平道路。
-      </div>
-    </div>
-
-    <!-- Item 4 -->
-    <div class="item">
-      <h3><span class="emoji">4.</span> 🤖 Hermes Agent v0.10.0 发布 Tool Gateway —— 开源自进化 Agent 的商业化尝试</h3>
-      <div class="source"><strong>来源：</strong><a href="https://github.com/NousResearch/hermes-agent/releases" target="_blank">GitHub Releases - NousResearch/hermes-agent</a> · 2026-04-16</div>
-      <div class="body">
-        Nous Research 的开源 AI Agent 项目 Hermes Agent（<strong>GitHub 8 万+ Star</strong>）发布 v0.10.0 "Tool Gateway" 版本。付费 Portal 订阅用户可通过网关一键接入 Web Search（Firecrawl）、Image Generation（FLUX 2 Pro）、TTS（OpenAI）、Browser Automation 四类高级工具，无需单独配 API Key。包含 180+ commits 的可靠性增强。
-      </div>
-      <div class="impact">
-        <strong>💡 为什么重要：</strong><strong>开源 Agent 的商业模式创新</strong>——"订阅制网关"模式降低了工具集成门槛，可能成为 Agent 即服务的参考模板。Hermes 的核心差异化是<strong>三层持久记忆 + 自动技能创建 + 自托管</strong>，与 Claude Code/Codex 的"一次性会话"形成鲜明对比。
-      </div>
-    </div>
-
-    <!-- Item 5 -->
-    <div class="item">
-      <h3><span class="emoji">5.</span> 🚀 Infosys × Harness 战略合作 —— Agentic AI 驱动的软件交付转型加速</h3>
-      <div class="source"><strong>来源：</strong><a href="https://www.infosys.com/newsroom/press-releases/2026/collaboration-enterprise-transformation-modernization-programs.html" target="_blank">Infosys 官方</a> / <a href="https://www.harness.io/press-and-news/harness-and-infosys-announce-collaboration-to-unlock-ai-value-for-enterprise" target="_blank">Harness 官方</a> · 2026-04-07</div>
-      <div class="body">
-        全球 IT 服务巨头 Infosys 与 AI 软件交付平台 Harness 达成战略合作，整合 Infosys Topaz Fabric（AI 咨询层）、Infosys Cobalt（云套件）与 Harness Software Delivery Platform，目标是<strong>加速全球企业的 Agentic AI 软件交付转型</strong>。覆盖从编码到部署的全生命周期自动化。
-      </div>
-      <div class="impact">
-        <strong>💡 为什么重要：</strong><strong>Harness Engineering 从方法论走向商业联盟</strong>——Infosys 的全球客户网络将为 Harness 带来大规模企业落地场景。这印证了 "AI 编程 → AI 软件交付 → AI 驱动业务转型" 的演进路径正在头部企业发生。
+        <strong>📈 对数据平台的影响：</strong>"数据基础设施"作为独立赛道首次出现，意味着国家层面开始将数据湖仓/数据编织/数据编织等基础能力视为需重点投入的方向。结合《"数据要素×"三年行动计划》2026 年收尾的时间节点，下半年有望迎来一波数据平台相关的政策性采购高峰。
       </div>
     </div>
   </div>
 
-  <!-- Section B: 补充动态速览 -->
+  <!-- Section B -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-b">B</span>
-      <h2>📊 补充动态速览</h2>
+      <h2>Product & Tech · 产品与技术</h2>
     </div>
-    <table class="speed-table">
-      <thead>
-        <tr>
-          <th style="width:35%">动态</th>
-          <th style="width:25%">来源</th>
-          <th style="width:40%">一句话点评</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>GPT-6 (Spud) 正式发布</strong></td>
-          <td>多家媒体报道 · 2026-04-14</td>
-          <td>5-6万亿参数，200万 Token 上下文，性能较 GPT-5.4 提升 40%<br><span style="color:#ea4335;font-size:13px;">→ 上下文窗口军备竞赛进入"百万级时代"，RAG vs 上下文填充的策略选择需要重新评估</span></td>
-        </tr>
-        <tr>
-          <td><strong>Claude Opus 4.6 默认 effort 调整为 medium</strong></td>
-          <td><a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md" target="_blank">Claude Code Changelog</a></td>
-          <td>Max/Team 用户默认使用中等努力度<br><span style="color:#34a853;font-size:13px;">→ Anthropic 在成本与质量之间寻找新的平衡点，对 API 定价策略有信号意义</span></td>
-        </tr>
-        <tr>
-          <td><strong>Claude Code 1M 上下文实战经验积累</strong></td>
-          <td><a href="https://www.iceyao.com.cn/post/2026-04-07-claude-code%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/" target="_blank">Iceyao's Blog</a> · 2026-04-07</td>
-          <td>社区开始分享 200K→1M 迁移中的"迷失中段"、延迟等踩坑经验<br><span style="color:#9334e6;font-size:13px;">→ 长上下文的工程化最佳实践正在快速沉淀</span></td>
-        </tr>
-      </tbody>
-    </table>
+
+    <div class="item">
+      <h3>1. Databricks Mosaic AI Model Serving 接入 GPT-5.5/GPT-5.5 Pro，Supervisor API 进入 Beta</h3>
+      <div class="meta">
+        <span class="tag">🤖 Mosaic AI</span>
+        <span class="tag">📅 2026-04-16 ~ 04-28 密集更新</span>
+      </div>
+      <div class="source">
+        📎 一手来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/april" target="_blank">Databricks AWS Release Notes (April 2026)</a> | 
+        <a href="https://docs.databricks.com/gcp/en/release-notes/product/2026/april" target="_blank">Databricks GCP Release Notes</a>
+      </div>
+      <div class="body">
+        Databricks 在4月密集发布多项产品更新，核心围绕 <strong>"Agent 基础设施化"</strong> 展开：<br><br>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;">
+          <tr style="background:#f8f9fa;"><td style="padding:6px 10px;border-bottom:1px solid #eee;font-weight:600;width:35%;">功能</td><td style="padding:6px 10px;border-bottom:1px solid #eee;font-weight:600;">详情</td><td style="padding:6px 10px;border-bottom:1px solid #eee;font-weight:600;width:90px;">日期</td></tr>
+          <tr><td style="padding:6px 10px;border-bottom:1px solid #eee;">GPT-5.5 / GPT-5.5 Pro 托管</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">Mosaic AI Model Serving 新增，按量付费访问</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;color:#ea4335;">04-24</td></tr>
+          <tr style="background:#fafafa;"><td style="padding:6px 10px;border-bottom:1px solid #eee;">Supervisor API（Beta）</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">单次API调用构建Agent，自动工具选择和执行</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;color:#ea4335;">04-24</td></tr>
+          <tr><td style="padding:6px 10px;border-bottom:1px solid #ei;">Claude Opus 4.7 支持</td><td style="padding:6px 10px;border-bottom:1px solid #ei;">推理 + 视觉能力</td><td style="padding:6px 10px;border-bottom:1px solid #ei;text-align:center;">04-16</td></tr>
+          <tr style="background:#fafafa;"><td style="padding:6px 10px;border-bottom:1px solid #eee;"><strong>ABAC 访问控制 GA ⭐</strong></td><td style="padding:6px 10px;border-bottom:1px solid #eee;">Unity Catalog 正式可用，⚠️破坏性变更：策略评估切换到会话用户身份</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;color:#34a853;">04-28</td></tr>
+          <tr><td style="padding:6px 10px;border-bottom:1px solid #eee;">数据分类 GA</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">Agent AI 自动分类标记 Unity Catalog 敏感数据</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;color:#34a853;">04-20</td></tr>
+          <tr style="background:#fafafa;"><td style="padding:6px 10px;border-bottom:1px solid #eee;">Vector Search 质量评估</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">内置检索质量评估，比较不同搜索策略相关性</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;">04-13</td></tr>
+          <tr><td style="padding:6px 10px;border-bottom:1px solid #eee;">SQL 仓库 5X-Large（预览）</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">512 工作线程规格</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;">04-28</td></tr>
+          <tr style="background:#fafafa;"><td style="padding:6px 10px;border-bottom:1px solid #eee;">Lakeflow Designer（预览）</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">可视化拖拽画布构建数据转换工作流</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;">04-22</td></tr>
+          <tr><td style="padding:6px 10px;border-bottom:1px solid #eee;">Runtime 18.2（Beta）</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">基于 Apache Spark 4.1.0</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;">04-08</td></tr>
+        </table>
+      </div>
+      <div class="impact">
+        <strong>📈 对数据平台的影响：</strong>Supervisor API 将 Agent 开发从手写 prompt 工程变为声明式 API 调用，GPT-5.5 接入进一步强化"一个平台搞定全部 AI 工作负载"。ABAC GA 回应了企业用户对 AI 治理的强需求。Spark 4.1 升级值得关注——通常带来显著性能提升。
+      </div>
+    </div>
+
+    <div class="item">
+      <h3>2. Azure Databricks 4 月更新：治理标签 SQL 语句 + Databricks One 统一 UI</h3>
+      <div class="meta">
+        <span class="tag">☁️ Azure</span>
+        <span class="tag">📅 2026年4月持续更新</span>
+      </div>
+      <div class="source">
+        📎 一手来源：<a href="https://learn.microsoft.com/zh-cn/azure/databricks/release-notes/product/2026/april" target="_blank">Microsoft Learn - Azure Databricks Release Notes April 2026</a>
+      </div>
+      <div class="body">
+        <strong>治理标签 SQL 化：</strong>新增五个治理标签 SQL 语句（CREATE / ALTER / DROP GOVERNED TAG 以及 SHOW / USE GOVERNED TAGS），使 Unity Catalog 治理标签的管理完全通过 SQL 实现。<br><br>
+        <strong>Databricks One UI（GA）：</strong>面向业务用户的统一交互入口，无需技术背景即可使用数据和 AI 功能。<br><br>
+        此外，Azure Databricks Lakehouse 架构良好文档系列于4月22日在中文文档站点上线。
+      </div>
+      <div class="impact">
+        <strong>📈 对数据平台的影响：</strong>治理标签 SQL 化表明 Unity Catalog 治理体系正在向 DBA/数据工程师熟悉的操作模式靠拢，降低了企业推广统一治理方案的阻力。Databricks One 则是对标 Tableau/Power BI 用户群体、争夺数据分析消费端入口的举措。
+      </div>
+    </div>
   </div>
 
-  <!-- Section E: Watchlist -->
+  <!-- Section C -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-c">C</span>
+      <h2>Views & Research · 观点与研究</h2>
+    </div>
+
+    <div class="item">
+      <h3>1. Stanford HAI 发布《2026 AI Index Report》</h3>
+      <div class="meta">
+        <span class="tag">📊 年度报告</span>
+        <span class="tag">📅 2026年4月发布</span>
+      </div>
+      <div class="source">
+        📎 来源：<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank">Stanford HAI Official</a>
+      </div>
+      <div class="body">
+        斯坦福大学人工智能研究所（HAI）发布年度 AI Index Report 2026 版。报告全面追踪全球 AI 发展趋势，涵盖模型能力基准测试、研发投资、技术采用率、政策法规等维度。报告指出 <strong>AI 对社会的影响从未如此显著</strong>，并将成为 21 世纪最具变革性的技术。
+      </div>
+      <div class="impact">
+        <strong>📈 对数据平台的参考价值：</strong>AI Index 是业界引用率最高的 AI 综合报告之一。"企业 AI 采用率""AI 基础设施支出增长""数据需求规模"等章节直接影响企业数据平台的预算规划和架构选型决策。建议关注 Agent/Automation 企业渗透率数据点。
+      </div>
+    </div>
+  </div>
+
+  <!-- Section D -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-d">D</span>
+      <h2>Capital & Corporate · 资本与公司</h2>
+    </div>
+    <div class="item-empty">本期无符合时效窗口的重大资本动态</div>
+  </div>
+
+  <!-- Section E -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-e">E</span>
-      <h2>🔭 值得持续跟踪</h2>
+      <h2>Watchlist · 关注列表</h2>
     </div>
-    <div class="watch-item">
-      <strong>1. Codex vs Claude Code 竞争走向</strong> — 本周双方密集发布，接下来几周 likely 有更多功能对标和价格战动作
+
+    <div class="item">
+      <h3>1. <span class="wl-type wl-preview">预告</span> GPT-5.5（代号"Spud"）生态整合进展</h3>
+      <div class="source">📎 参考：<a href="https://github.com/Zijian-Ni/awesome-ai-agents-2026" target="_blank">Awesome AI Agents 2026 (GitHub)</a></div>
+      <div class="body">
+        GPT-5.5 于4月23日正式发布，定位面向 Agentic 任务的前沿模型（编码/在线研究/数据分析/工具导航）。目前 Databricks 已率先接入托管服务（4月24日）。
+        <br><br>
+        <strong>👀 后续关注：</strong>Snowflake Cortex Analytics 是否跟进支持 GPT-5.5？OpenAI 是否发布更多 Agent 编排相关的官方工具链更新？
+      </div>
     </div>
-    <div class="watch-item">
-      <strong>2. MCP SEP-1442 无状态化落地时间表</strong> — 从提案到 SDK 正式支持的时间线将直接影响企业 MCP 部署节奏
+
+    <div class="item">
+      <h3>2. <span class="wl-type wl-track">跟踪</span> Microsoft-OpenAI 协议变更的市场反应</h3>
+      <div class="source">📎 参考：<a href="https://www.cnbc.com/2026/04/27/openai-microsoft-partnership-revenue-cap.html" target="_blank">CNBC</a> | 
+        <a href="https://www.nextplatform.com/ai/2026/04/28/microsoft-and-openai-remain-friends-are-looking-to-hook-up-with-others/5218929" target="_blank">Next Platform 分析</a>
+      </div>
+      <div class="body">
+        协议公布后 Microsoft 股价出现下跌，市场正在消化"失去 OpenAI 独家权"的含义。但对数据平台行业的深层影响尚未充分定价——包括 OpenAI 与 AWS/GCP 的潜在合作是否会改变多云数据架构选择偏好。
+        <br><br>
+        <strong>👀 等待信号：</strong>OpenAI 未来数周是否与其他云厂商签署官方托管协议；AWS/GCP 官方回应或产品动向。
+      </div>
     </div>
-    <div class="watch-item">
-      <strong>3. GPT-6 200 万 Token 上下文的实际可用性</strong> — 目前主要是发布会数据，需要等待开发者社区的实测报告
-    </div>
-    <div class="watch-item">
-      <strong>4. Hermes Agent 商业化路径验证</strong> — 开源项目能否通过订阅制网关实现可持续收入
+
+    <div class="item">
+      <h3>3. <span class="wl-type wl-track">跟踪</span> Google Cloud Next '26 后续产品落地节奏</h3>
+      <div class="source">📎 参考：<a href="https://virtualizationreview.com/articles/2026/04/24/google-cloud-next-26-gemini-enterprise-agent-platform-leads-ai-centric-news.aspx" target="_blank">Virtualization Review</a> | 
+        <a href="https://oplexa.com/google-cloud-next-2026/" target="_blank">Oplexa 全量公告汇总</a>
+      </div>
+      <div class="body">
+        Next '26 公布了大量预览版功能（Data Agent Kit、Spanner Omni、双向联邦查询等）。对企业数据团队而言，关键是这些能力的 <strong>GA 时间表</strong>和<strong>实际性能表现</strong>——尤其是 BigQuery 跨云读取 Databricks/Snowflake 目录的延迟和成本。
+        <br><br>
+        <strong>👀 等待信号：</strong>Google Cloud 发布预览功能的 GA 时间表；第三方 BigQuery 联邦查询性能评测数据。
+      </div>
     </div>
   </div>
 
   <div class="footer">
-    <p><b>Powered by Data+AI Daily Brief Skill</b> · 自动化任务 ai-2</p>
-    <p>信息截至北京时间 2026-04-18 · 每周六推送</p>
+    <p>Powered by Data+AI Daily Brief Skill · Automation ai-2</p>
+    <p>生成时间：2026-04-29 16:30 CST · 本日报由 AI 采集编写，仅供信息参考，不构成投资建议或技术选型推荐</p>
   </div>
 
 </div>
