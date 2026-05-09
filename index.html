@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-04-29</title>
+<title>Data+AI 全球日报 | 2026-05-09</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -49,16 +49,16 @@
   }
   .summary-box h2 { font-size: 18px; color: var(--accent); margin-bottom: 16px; }
   .summary-box ol { padding-left: 20px; }
-  .summary-box li { margin-bottom: 10px; font-size: 15px; line-height: 1.6; }
+  .summary-box li { margin-bottom: 10px; font-size: 15px; }
   .summary-box .verdict {
     background: var(--primary-light);
     padding: 14px 18px;
     border-radius: 8px;
-    margin-top: 18px;
+    margin-top: 16px;
     font-size: 14px;
     color: var(--primary);
     font-weight: 500;
-    line-height: 1.7;
+    line-height: 1.8;
   }
   
   .section {
@@ -80,11 +80,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     border-radius: 8px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 15px;
     color: white;
     flex-shrink: 0;
   }
@@ -105,86 +105,66 @@
     font-weight: 600;
     margin-bottom: 8px;
     color: var(--text);
-    line-height: 1.5;
-  }
-  .item .meta {
-    font-size: 12px;
-    color: var(--text-secondary);
-    margin-bottom: 10px;
     display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
   }
-  .item .meta .tag {
-    background: #e8eaed;
+  .item h3 .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
     padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: 500;
+    border-radius: 10px;
+    color: white;
+    flex-shrink: 0;
   }
+  .tag-ma { background: #e91e63; }
+  .tag-er { background: #9c27b0; }
+  .tag-ipo { background: #ff9800; }
+  .tag-fwd { background: #4caf50; }
+  .tag-watch { background: #607d8b; }
   .item .source {
     font-size: 13px;
     color: var(--text-secondary);
     margin-bottom: 10px;
   }
-  .item .source a { color: var(--primary); text-decoration: none; word-break: break-all; }
+  .item .source a { color: var(--primary); text-decoration: none; }
   .item .source a:hover { text-decoration: underline; }
-  .item .body { font-size: 14px; line-height: 1.8; color: #3c4043; }
+  .item .body { font-size: 14px; line-height: 1.8; color: #3c4043; margin-bottom: 10px; }
   .item .impact {
-    background: linear-gradient(135deg, #e8f4fd 0%, #f0f7ff 100%);
+    background: #f0f7ff;
     padding: 12px 16px;
     border-radius: 8px;
-    margin-top: 12px;
-    font-size: 13px;
-    color: #1558b0;
-    border-left: 3px solid var(--primary);
-    line-height: 1.6;
+    margin-top: 10px;
+    font-size: 13.5px;
+    color: #1a56db;
+    line-height: 1.7;
   }
-  .item-empty {
-    text-align: center;
-    padding: 20px;
-    color: var(--text-secondary);
-    font-size: 14px;
-    font-style: italic;
-  }
-
-  /* Type tags for Section D */
-  .type-tag {
+  .item .impact strong { color: #0d47a1; }
+  
+  .data-highlight {
     display: inline-block;
-    padding: 2px 10px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: 600;
-    margin-right: 6px;
-  }
-  .tag-funding { background: #fef7e0; color: #b06000; }
-  .tag-earnings { background: #e6f4ea; color: #137333; }
-  .tag-ipo { background: #fce8e6; color: #c5221f; }
-  .tag-ma { background: #e8f0fe; color: #1967d2; }
-
-  /* Watchlist type tags */
-  .wl-type {
-    display: inline-block;
-    padding: 2px 8px;
+    background: #fff3cd;
+    padding: 1px 6px;
     border-radius: 4px;
-    font-size: 11px;
     font-weight: 600;
+    color: #856404;
+    font-size: 13px;
   }
-  .wl-preview { background: #fff3e0; color: #e65100; }
-  .wl-downgrade { background: #f3e5f5; color: #7b1fa2; }
-  .wl-track { background: #e0f2f1; color: #00695c; }
-
+  
   .footer {
     text-align: center;
     padding: 24px;
     font-size: 12px;
     color: var(--text-secondary);
   }
-  
+
   @media (max-width: 640px) {
     body { padding: 12px; }
     .header { padding: 24px; }
     .header h1 { font-size: 22px; }
     .section, .summary-box { padding: 20px; }
+    .item h3 { flex-wrap: wrap; }
   }
 </style>
 </head>
@@ -193,236 +173,251 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-04-29（周三） · 时效窗口：4月28日 08:00 — 4月29日 08:00 CST</div>
+    <div class="date">2026-05-09（周五） · 时效窗口：5/8 08:00 – 5/9 08:00 CST</div>
   </div>
 
   <!-- Summary -->
   <div class="summary-box">
-    <h2>🔥 今日最重要的3个变化方向</h2>
+    <h2>🔥 今日最重要的 3 个变化方向</h2>
     <ol>
-      <li><strong>云 AI 排他时代终结</strong> — 微软与 OpenAI 解除独家绑定，企业级 AI 部署将不再被单一云厂商锁定，跨云多模型架构成为可行选项</li>
-      <li><strong>数据平台 → 行动系统</strong> — Google 宣示 Agentic Data Cloud 战略，Databricks 同步推进 Supervisor API，数据平台正从被动查询工具演变为 AI Agent 的执行层</li>
-      <li><strong>数据要素政策红利释放</strong> — 国家数据局启动第二届"数据要素×"大赛，首次设立"数据基础设施"专项赛道，下半年有望迎来政策性采购高峰</li>
+      <li><strong>应用层巨头反向收购数据平台。</strong>SAP 斥资收购 Dremio 构建 Iceberg 原生湖仓，数据平台格局从"云厂商三国杀"扩展为"应用层 + 平台层"双向整合，ERP 厂商不再满足于对接平台而是直接内化能力。</li>
+      <li><strong>实时流与语义湖仓成为 Agent 数据地基标配。</strong>IBM Think 2026 发布的 Agentic Enterprise 蓝图中，Confluent 实时流 + watsonx.data 语义湖仓构成 AI 的核心数据基础设施，解决传统湖仓时效性痛点。</li>
+      <li><strong>治理协调中心取代单纯元数据管理成为竞争焦点。</strong>Databricks Catalog Commits GA 使 Unity Catalog 升级为跨引擎事务协调中心，开放表格式治理竞争从"谁的格式更快"转向"谁能成为 System of Coordination"。</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>本周是数据平台行业的关键转折点。微软-OpenAI 合作重构意味着云 AI 市场进入"多伙伴时代"，Google Agentic Data Cloud 和 Databricks Agent 能力升级共同指向同一个方向——<strong>Agent 编排能力和跨云互操作能力将成为新的核心竞争力</strong>。国内方面，数据要素大赛释放明确的基建投资信号，建议关注城市治理/医疗健康/数据基础设施三个赛道的项目机会。
+      <strong>总判断：</strong>本周发生了 SAP 收购 Dremio 和 IBM Think 2026 两起具有战略意义的事件，共同指向同一趋势——<strong>应用层巨头正在将开源湖仓能力内化为自身产品栈的一部分</strong>。与此同时，Databricks 通过 Catalog Commits GA 强化了 Unity Catalog 作为跨引擎治理中心的地位。数据平台的竞争维度正从"谁的仓库更快"升级为"谁能成为企业数据的统一协调中心"。Iceberg 作为事实标准表格的地位在本周得到进一步巩固。
     </div>
   </div>
 
-  <!-- Section A -->
+  <!-- A. Top Signals -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-a">A</span>
-      <h2>Top Signals · 核心事件</h2>
+      <h2>Top Signals — 核心信号（3 条）</h2>
     </div>
 
     <div class="item">
-      <h3>1. 微软与 OpenAI 重构合作关系，终结排他性条款</h3>
-      <div class="meta">
-        <span class="tag">🔴 战略级</span>
-        <span class="tag">📅 2026-04-27 发布</span>
-      </div>
+      <h3>1. SAP 宣布收购 Dremio，构建 Apache Iceberg 原生企业级湖仓</h3>
       <div class="source">
-        📎 一手来源：<a href="https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/" target="_blank">Microsoft Official Blog</a> | 
-        <a href="https://www.cnbc.com/2026/04/27/openai-microsoft-partnership-revenue-cap.html" target="_blank">CNBC 报道</a> | 
-        <a href="https://arstechnica.com/ai/2026/04/no-longer-exclusive-microsoft-agrees-to-let-openai-see-other-cloud-providers/" target="_blank">Ars Technica 分析</a>
+        📎 来源：<a href="https://news.sap.com/2026/05/sap-to-acquire-dremio-unify-sap-and-non-sap-data-power-agentic-ai/" target="_blank">SAP News Center</a> ·
+        <a href="https://www.prnewswire.com/news-releases/sap-to-acquire-dremio-to-unify-sap-and-non-sap-data-to-power-agentic-ai-302761280.html" target="_blank">PR Newswire</a> ·
+        <a href="https://www.dremio.com/newsroom/sap-to-acquire-dremio-to-unify-sap-and-non-sap-data-to-power-agentic-ai/" target="_blank">Dremio Official</a>
+        &nbsp;| 📅 2026年5月4日
       </div>
       <div class="body">
-        微软和 OpenAI 于4月27日联合宣布修订合作协议，核心变化包括：
-        <br><br>
-        <strong>① 排他性解除：</strong>OpenAI 不再绑定 Azure 作为唯一云服务商——微软的 IP 许可证变为<strong>非独占性质</strong>至2032年，OpenAI 可向任何主流云厂商提供模型服务。<br>
-        <strong>② 收入分成逆转：</strong>微软<strong>不再</strong>向 OpenAI 支付收入分成；反之 OpenAI 向微软支付至2030年（设总上限）。<br>
-        <strong>③ AGI 条款移除：</strong>从公开文本中移除通用人工智能触发条件相关条款。<br>
-        <strong>④ 首发权保留：</strong>微软仍是 OpenAI "主要云合作伙伴"，OpenAI 产品仍优先在 Azure 首发。
+        <p>SAP 与 Dremio 达成收购协议，将 Dremio 的开源、高性能数据湖仓平台纳入 SAP Business Data Cloud。收购完成后，SAP Business Data Cloud 将转变为 <strong>Apache Iceberg 原生的企业级湖仓</strong>，统一管理 SAP 数据和非 SAP 数据，无需 ETL 或数据格式转换即可支持联邦查询和实时分析。</p>
+        <p>Dremio 定位为<strong>"专为智能体构建且由智能体管理"</strong>的 Iceberg 原生平台，具备无 ETL 联邦查询、AI 语义层、自主集群管理三大特色。交易条款未披露，预计 <span class="data-highlight">2026 年 Q3 完成</span>（待监管批准）。</p>
+        <p>同日，SAP 还宣布收购 AI 表格基础模型公司 <strong>Prior Labs</strong>，并承诺未来四年投资超 <span class="data-highlight">€10 亿+</span>，形成"数据基础设施 + AI 模型"完整组合拳。</p>
       </div>
       <div class="impact">
-        <strong>📈 对数据平台的影响：</strong>这是自2019年双方建立合作以来最重大的结构性调整。短期影响有限（Azure 仍为首选首发平台），但中长期意味着 OpenAI 模型可通过 AWS/GCP 等其他渠道获取，跨云部署 AI 工作负载成为现实。Databricks 已率先响应——其 Mosaic AI Model Serving 在4月24日即上线 GPT-5.5 托管服务。
+        <strong>🎯 为什么对数据平台重要：</strong>这是 ERP/应用层巨头对数据平台领域最具野心的横向扩张之一。SAP 绕过了与 Snowflake/Databricks 的纯合作模式，直接内化湖仓能力。对 Iceberg 生态而言，这是继 Tabular 被 Snowflake 收购后又一重量级背书，进一步确认了 Iceberg 作为开放表格式事实标准的地位。对数据架构师来说，意味着"SAP 数据是否应该进数据湖"这个长期问题有了官方答案——SAP 自己就在建湖。
       </div>
     </div>
 
     <div class="item">
-      <h3>2. Google Cloud Next '26 发布 Agentic Data Cloud，数据平台进入 Agent 时代</h3>
-      <div class="meta">
-        <span class="tag">🔴 产品战略</span>
-        <span class="tag">📅 2026-04-22~24 大会期间发布</span>
-      </div>
+      <h3>2. IBM Think 2026：发布"AI 运营模式"蓝图，Confluent 实时流 + watsonx.data 语义湖仓驱动 Agentic Enterprise</h3>
       <div class="source">
-        📎 一手来源：<a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/next-2026/" target="_blank">Google Cloud Blog 总览</a> | 
-        <a href="https://cloud.google.com/blog/products/data-analytics/whats-new-in-the-agentic-data-cloud" target="_blank">Agentic Data Cloud 详细公告</a>
+        📎 来源：<a href="https://www.prnewswire.com/news-releases/think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens-302762136.html" target="_blank">IBM via PR Newswire</a> ·
+        <a href="https://china.newsroom.ibm.com/2026-05-07-Think-2026-IBM-AI-,-AI" target="_blank">IBM 中国</a>
+        &nbsp;| 📅 2026年5月5日
       </div>
       <div class="body">
-        在 Las Vegas 举办的 Cloud Next '26 上，Google 正式发布 <strong>Agentic Data Cloud</strong> 战略愿景及产品矩阵：<br><br>
-        <strong>🏗️ BigQuery 性能与成本：</strong>流体自动扩缩容平均降低 <strong>34%</strong> 查询成本；新增 Measures 语义层（预览版）<br>
-        <strong>🤖 Data Agent Kit（预览版）：</strong>在 VS Code / Claude Code / Gemini CLI 等 IDE 中编排数据工程/科学/治理类 Agent<br>
-        <strong>🔧 四大内置专用 Agent：</strong>Data Engineering Agent（GA）、Data Science Agent（GA）、Database Observability Agent（预览版）、Deep Research Agent（预览版）<br>
-        <strong>📚 Knowledge Catalog：</strong>Dataplex Catalog 演进版，聚合跨平台元数据（SAP/Salesforce/ServiceNow），Gemini 自动补全 Schema<br>
-        <strong>🌐 开放联邦查询：</strong>可直接读取 Databricks Unity Catalog、Snowflake Polaris、AWS Glue 目录（均预览版）<br>
-        <strong>🔌 MCP 协议全面支持：</strong>BigQuery/Spanner/Looker 等核心引擎提供 MCP 接口
+        <p>IBM 在波士顿 Think 2026 大会上发布了最全面的企业 AI 和混合云管理扩展方案，定义了 <strong>"Agentic Enterprise（智能体企业）"</strong>运营模式，由四大集成系统组成：</p>
+        <ul style="margin: 8px 0 8px 20px;">
+          <li><strong>watsonx Orchestrate（下一代）</strong>— 多智能体编排控制平面，私密预览</li>
+          <li><strong>Confluent 集成 GA</strong> — 基于 Kafka/Flink 的实时数据流正式可用，Confluent Real-Time Context Engine 为 AI 提供实时上下文</li>
+          <li><strong>watsonx.data 升级</strong> — Context Layer 语义层（OpenRAG 开放检索增强生成）+ GPU 加速 Presto 引擎（<span class="data-highlight">83% 成本节约 / 30倍性价比</span>，雀巢 PoC）</li>
+          <li><strong>Concert 智能运维平台</strong> — 公开预览；<strong>Sovereign Core 主权核心</strong> — GA</li>
+        </ul>
       </div>
       <div class="impact">
-        <strong>📈 对数据平台的影响：</strong>行业头部玩家首次将"Agent Scale"而非"Human Scale"作为架构设计目标。Data Agent Kit 直接对标 Databricks Mosaic AI Agent Framework；开放联邦查询 + MCP 在 Iceberg 标准之上进一步降低跨云门槛。BigQuery 从数据仓库进化为"行动系统"，对 Snowflake/Databricks 构成直接竞争压力。
+        <strong>🎯 为什么对数据平台重要：</strong>IBM 展示了完整的"实时数据流 → 语义化湖仓 → Agent 编排"技术栈。特别是 Confluent + watsonx.data 的 GA 集成，标志着传统数据湖最大的痛点之一——<strong>数据新鲜度</strong>——正在被系统性地解决。GPU 加速 Presto 的成本数据如果能在更多场景复现，将对湖仓查询经济性产生深远影响。
       </div>
     </div>
 
     <div class="item">
-      <h3>3. 国家数据局启动 2026 年"数据要素×"大赛，设 17 个赛道含数据基础设施专项</h3>
-      <div class="meta">
-        <span class="tag">🟡 政策驱动</span>
-        <span class="tag">📅 2026-04-27 发布</span>
-      </div>
+      <h3>3. Databricks Catalog Commits 正式发布 (GA)：Unity Catalog 升级为跨引擎事务协调中心</h3>
       <div class="source">
-        📎 来源：<a href="https://news.qq.com/rain/a/20260428A065C000" target="_blank">国家数据局通知（腾讯新闻转载）</a>
+        📎 来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/may" target="_blank">Databricks Release Notes - May 2026</a>
+        &nbsp;| 📅 2026年5月8日
       </div>
       <div class="body">
-        国家数据局联合住建部等部委于4月27日发布通知，启动 2026 年"数据要素×"大赛。<br><br>
-        <strong>🏆 赛事主题：</strong>"<strong>数据赋能 乘数而上</strong>"<br>
-        <strong>📋 赛道设置：</strong>16 个行业赛道 + 1 个专业赛道（<strong style="color:#ea4335;">数据基础设施</strong>）<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;行业赛道覆盖：工业制造 / 现代农业 / 商贸流通 / 交通运输 / 金融服务 / 科技创新 / 医疗健康 / 医疗保障 / 应急管理 / 气象服务 / 城市治理 / 绿色低碳 / 人力资源 / 体育发展 / 文物保护利用 / 中医药<br>
-        <strong>🏗️ 赛制安排：</strong>地方分赛 → 全国总决赛<br>
-        <strong>💡 重点关联：</strong>城市治理赛道明确提及 CIM（城市信息模型）平台深度结合，获奖项目可优先纳入住建部 CIM 平台应用案例库
+        <p>Databricks 宣布 <strong>Catalog Commits 功能正式发布 (GA)</strong>——这是一项重大架构更新：</p>
+        <ul style="margin: 8px 0 8px 20px;">
+          <li>Unity Catalog 从元数据管理升级为表的 <strong>System of Coordination（协调中心）</strong></li>
+          <li>支持 <strong>多语句、多表事务</strong></li>
+          <li>覆盖范围：流式表、Delta Sharing、Zerobus、Lakeflow Connect、Mosaic AI Gateway、MLflow、Lakeflow Jobs 触发器</li>
+          <li><strong>Lakeflow Pipelines Editor 同步 GA</strong> — Agent 优先体验，集成 Genie Code</li>
+        </ul>
       </div>
       <div class="impact">
-        <strong>📈 对数据平台的影响：</strong>"数据基础设施"作为独立赛道首次出现，意味着国家层面开始将数据湖仓/数据编织/数据编织等基础能力视为需重点投入的方向。结合《"数据要素×"三年行动计划》2026 年收尾的时间节点，下半年有望迎来一波数据平台相关的政策性采购高峰。
+        <strong>🎯 为什么对数据平台重要：</strong>Catalog Commits 是 Unity Catalog 自推出以来最具架构意义的升级。它解决了多引擎环境下的核心痛点：如何保证跨引擎事务的一致性和可协调性？Databricks 的答案是让 Unity Catalog 成为协调中枢。这与 SAP 选择 Iceberg、IBM 投资语义层的方向一致——<strong>治理和控制平面正在成为数据平台竞争的新焦点</strong>。
       </div>
     </div>
   </div>
 
-  <!-- Section B -->
+  <!-- B. Product & Tech -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-b">B</span>
-      <h2>Product & Tech · 产品与技术</h2>
+      <h2>Product & Tech — 产品与技术（3 条）</h2>
     </div>
 
     <div class="item">
-      <h3>1. Databricks Mosaic AI Model Serving 接入 GPT-5.5/GPT-5.5 Pro，Supervisor API 进入 Beta</h3>
-      <div class="meta">
-        <span class="tag">🤖 Mosaic AI</span>
-        <span class="tag">📅 2026-04-16 ~ 04-28 密集更新</span>
-      </div>
+      <h3>1. dbt Fusion + Snowflake 连接体验正式发布 (GA)</h3>
       <div class="source">
-        📎 一手来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/april" target="_blank">Databricks AWS Release Notes (April 2026)</a> | 
-        <a href="https://docs.databricks.com/gcp/en/release-notes/product/2026/april" target="_blank">Databricks GCP Release Notes</a>
+        📎 来源：<a href="https://docs.getdbt.com/docs/dbt-versions/dbt-cloud-release-notes" target="_blank">dbt Cloud Release Notes</a>
+        &nbsp;| 📅 2026年5月7日
       </div>
       <div class="body">
-        Databricks 在4月密集发布多项产品更新，核心围绕 <strong>"Agent 基础设施化"</strong> 展开：<br><br>
-        <table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;">
-          <tr style="background:#f8f9fa;"><td style="padding:6px 10px;border-bottom:1px solid #eee;font-weight:600;width:35%;">功能</td><td style="padding:6px 10px;border-bottom:1px solid #eee;font-weight:600;">详情</td><td style="padding:6px 10px;border-bottom:1px solid #eee;font-weight:600;width:90px;">日期</td></tr>
-          <tr><td style="padding:6px 10px;border-bottom:1px solid #eee;">GPT-5.5 / GPT-5.5 Pro 托管</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">Mosaic AI Model Serving 新增，按量付费访问</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;color:#ea4335;">04-24</td></tr>
-          <tr style="background:#fafafa;"><td style="padding:6px 10px;border-bottom:1px solid #eee;">Supervisor API（Beta）</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">单次API调用构建Agent，自动工具选择和执行</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;color:#ea4335;">04-24</td></tr>
-          <tr><td style="padding:6px 10px;border-bottom:1px solid #ei;">Claude Opus 4.7 支持</td><td style="padding:6px 10px;border-bottom:1px solid #ei;">推理 + 视觉能力</td><td style="padding:6px 10px;border-bottom:1px solid #ei;text-align:center;">04-16</td></tr>
-          <tr style="background:#fafafa;"><td style="padding:6px 10px;border-bottom:1px solid #eee;"><strong>ABAC 访问控制 GA ⭐</strong></td><td style="padding:6px 10px;border-bottom:1px solid #eee;">Unity Catalog 正式可用，⚠️破坏性变更：策略评估切换到会话用户身份</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;color:#34a853;">04-28</td></tr>
-          <tr><td style="padding:6px 10px;border-bottom:1px solid #eee;">数据分类 GA</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">Agent AI 自动分类标记 Unity Catalog 敏感数据</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;color:#34a853;">04-20</td></tr>
-          <tr style="background:#fafafa;"><td style="padding:6px 10px;border-bottom:1px solid #eee;">Vector Search 质量评估</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">内置检索质量评估，比较不同搜索策略相关性</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;">04-13</td></tr>
-          <tr><td style="padding:6px 10px;border-bottom:1px solid #eee;">SQL 仓库 5X-Large（预览）</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">512 工作线程规格</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;">04-28</td></tr>
-          <tr style="background:#fafafa;"><td style="padding:6px 10px;border-bottom:1px solid #eee;">Lakeflow Designer（预览）</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">可视化拖拽画布构建数据转换工作流</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;">04-22</td></tr>
-          <tr><td style="padding:6px 10px;border-bottom:1px solid #eee;">Runtime 18.2（Beta）</td><td style="padding:6px 10px;border-bottom:1px solid #eee;">基于 Apache Spark 4.1.0</td><td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:center;">04-08</td></tr>
-        </table>
+        <p>dbt 平台宣布 <strong>Fusion + Snowflake 连接体验正式可用 (GA)</strong>。Fusion 是 dbt 从"模板渲染工具"向"状态感知的编排引擎"转型的核心引擎，此次 GA 标志着 Fusion 已覆盖两大主流云数据平台（Databricks + Snowflake）。同时 Snowflake 计划增加默认列宽，dbt-snowflake 低版本可能受影响。</p>
       </div>
       <div class="impact">
-        <strong>📈 对数据平台的影响：</strong>Supervisor API 将 Agent 开发从手写 prompt 工程变为声明式 API 调用，GPT-5.5 接入进一步强化"一个平台搞定全部 AI 工作负载"。ABAC GA 回应了企业用户对 AI 治理的强需求。Spark 4.1 升级值得关注——通常带来显著性能提升。
+        <strong>💡 影响：</strong>Fusion 双平台 GA 标志着数据转换层的"状态感知"时代正式到来。对数据工程师而言，增量模型的管理方式将从模板渲染升级为具备状态追踪和智能编排能力的完整引擎。
       </div>
     </div>
 
     <div class="item">
-      <h3>2. Azure Databricks 4 月更新：治理标签 SQL 语句 + Databricks One 统一 UI</h3>
-      <div class="meta">
-        <span class="tag">☁️ Azure</span>
-        <span class="tag">📅 2026年4月持续更新</span>
-      </div>
+      <h3>2. Azure Databricks 5 月更新：英国区域控制平面 + Serverless 独立流水线</h3>
       <div class="source">
-        📎 一手来源：<a href="https://learn.microsoft.com/zh-cn/azure/databricks/release-notes/product/2026/april" target="_blank">Microsoft Learn - Azure Databricks Release Notes April 2026</a>
+        📎 来源：<a href="https://learn.microsoft.com/en-us/azure/databricks/release-notes/product/2026/may" target="_blank">Microsoft Learn - Azure Databricks May 2026</a>
+        &nbsp;| 📅 2026年5月2日–8日
       </div>
       <div class="body">
-        <strong>治理标签 SQL 化：</strong>新增五个治理标签 SQL 语句（CREATE / ALTER / DROP GOVERNED TAG 以及 SHOW / USE GOVERNED TAGS），使 Unity Catalog 治理标签的管理完全通过 SQL 实现。<br><br>
-        <strong>Databricks One UI（GA）：</strong>面向业务用户的统一交互入口，无需技术背景即可使用数据和 AI 功能。<br><br>
-        此外，Azure Databricks Lakehouse 架构良好文档系列于4月22日在中文文档站点上线。
+        <ul style="margin: 8px 0 8px 18px;">
+          <li>英国南部新增专用<strong>区域控制平面</strong></li>
+          <li><strong>Serverless 通用计算支持独立流水线</strong>（物化视图 + 流式表），Beta</li>
+          <li>引入 <code>%uv pip</code> 包管理命令作为 <code>%pip</code> 的快速替代</li>
+          <li><strong>笔记本原生数据画像</strong>功能上线</li>
+        </ul>
       </div>
       <div class="impact">
-        <strong>📈 对数据平台的影响：</strong>治理标签 SQL 化表明 Unity Catalog 治理体系正在向 DBA/数据工程师熟悉的操作模式靠拢，降低了企业推广统一治理方案的阻力。Databricks One 则是对标 Tableau/Power BI 用户群体、争夺数据分析消费端入口的举措。
+        <strong>💡 影响：</strong>Serverless 上支持独立流水线是 ETL 工作流向无服务器架构迁移的重要一步。<code>%uv pip</code> 的引入反映了 Python 生态中 uv 工具链的快速普及趋势。
+      </div>
+    </div>
+
+    <div class="item">
+      <h3>3. Databricks Lakeflow Connect 新增 Outlook/GitHub/Smartsheet 连接器</h3>
+      <div class="source">
+        📎 来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/may" target="_blank">Databricks Release Notes - May 2026</a>
+        &nbsp;| 📅 2026年5月5日
+      </div>
+      <div class="body">
+        <p>Lakeflow Connect 新增三个 SaaS 数据连接器（均为 Beta）：<strong>Outlook</strong>（邮件数据）、<strong>GitHub</strong>（代码仓库）、<strong>Smartsheet</strong>（项目管理）。同时发布<strong>社区连接器框架</strong>，支持用户自建开源连接器扩展生态。</p>
+      </div>
+      <div class="impact">
+        <strong>💡 影响：</strong>覆盖通信、代码协作、项目管理三大高频 SaaS 场景，社区连接器框架降低了长尾数据源接入门槛。
       </div>
     </div>
   </div>
 
-  <!-- Section C -->
+  <!-- C. Views & Research -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-c">C</span>
-      <h2>Views & Research · 观点与研究</h2>
+      <h2>Views & Research — 观点与研究（1 条）</h2>
     </div>
 
     <div class="item">
-      <h3>1. Stanford HAI 发布《2026 AI Index Report》</h3>
-      <div class="meta">
-        <span class="tag">📊 年度报告</span>
-        <span class="tag">📅 2026年4月发布</span>
-      </div>
+      <h3>1. Palantir Q1 FY2026 财报：营收 $16.3 亿同比增 85%，美国收入翻倍</h3>
       <div class="source">
-        📎 来源：<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank">Stanford HAI Official</a>
+        📎 来源：<a href="https://investors.palantir.com/financials/quarterly-results" target="_blank">Palantir IR</a> ·
+        <a href="https://www.cnbc.com/2026/05/04/palantir-pltr-q1-earnings-report-2026.html" target="_blank">CNBC</a>
+        &nbsp;| 📅 2026年5月4日
       </div>
       <div class="body">
-        斯坦福大学人工智能研究所（HAI）发布年度 AI Index Report 2026 版。报告全面追踪全球 AI 发展趋势，涵盖模型能力基准测试、研发投资、技术采用率、政策法规等维度。报告指出 <strong>AI 对社会的影响从未如此显著</strong>，并将成为 21 世纪最具变革性的技术。
+        <table style="width:100%;border-collapse:collapse;font-size:13px;margin:10px 0;">
+          <tr style="background:#f8f9fa;"><td style="padding:6px 10px;border:1px solid #ddd;"><strong>指标</strong></td><td style="padding:6px 10px;border:1px solid #ddd;"><strong>数值</strong></td><td style="padding:6px 10px;border:1px solid #ddd;"><strong>YoY</strong></td></tr>
+          <tr><td style="padding:6px 10px;border:1px solid #ddd;">营收</td><td style="padding:6px 10px;border:1px solid #ddd;"><span class="data-highlight">$16.3 亿</span></td><td style="padding:6px 10px;border:1px solid #ddd;">+85%</td></tr>
+          <tr><td style="padding:6px 10px;border:1px solid #ddd;">EPS</td><td style="padding:6px 10px;border:1px solid #ddd;">$0.33（预期 $0.285）</td><td style="padding:6px 10px;border:1px solid #ddd;">超预期</td></tr>
+          <tr><td style="padding:6px 10px;border:1px solid #ddd;">美国收入增速</td><td style="padding:6px 10px;border:1px solid #ddd;" colspan="2"><span class="data-highlight">+104%</span>（环比 +19%）</td></tr>
+          <tr><td style="padding:6px 10px;border:1px solid #ddd;">增长驱动</td><td colspan="2" style="padding:6px 10px;border:1px solid #ddd;">AIP 平台需求爆发 + 美国政府/商业客户</td></tr>
+        </table>
       </div>
       <div class="impact">
-        <strong>📈 对数据平台的参考价值：</strong>AI Index 是业界引用率最高的 AI 综合报告之一。"企业 AI 采用率""AI 基础设施支出增长""数据需求规模"等章节直接影响企业数据平台的预算规划和架构选型决策。建议关注 Agent/Automation 企业渗透率数据点。
+        <strong>📊 映射到数据平台：</strong>Palantir AIP 平台的核心竞争力建立在<strong>数据集成 + 语义层 + Agent 编排</strong>之上——这与本周 SAP（Dremio）和 IBM（Think 2026）的战略方向高度重合。"数据就绪 → AI Agent"路径的商业可行性已被 Palantir 财务数据强力验证。数据治理和语义层的投入可以直接转化为 AI 收入。
       </div>
     </div>
   </div>
 
-  <!-- Section D -->
+  <!-- D. Capital & Corporate -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-d">D</span>
-      <h2>Capital & Corporate · 资本与公司</h2>
+      <h2>Capital & Corporate — 资本与公司（2 条）</h2>
     </div>
-    <div class="item-empty">本期无符合时效窗口的重大资本动态</div>
+
+    <div class="item">
+      <h3><span class="tag tag-ma">【收购兼并】</span> SAP 双线收购：Dremio + Prior Labs，承诺 €10 亿+</h3>
+      <div class="source">
+        📎 来源：<a href="https://news.sap.com/2026/05/sap-to-acquire-dremio-unify-sap-and-non-sap-data-power-agentic-ai/" target="_blank">SAP News</a> ·
+        <a href="https://www.crn.com/news/ai/2026/sap-to-buy-dremio-and-prior-labs-to-lead-agentic-and-ai-models" target="_blank">CRN</a> ·
+        <a href="https://www.constellationr.com/insights/news/sap-acquires-dremio-prior-labs-it-builds-out-its-data-platform-plan" target="_blank">Constellation Research</a>
+        &nbsp;| 📅 2026年5月4日
+      </div>
+      <div class="body">
+        <p><strong>核心数据：</strong>交易金额未披露；Prior Labs 为表格基础模型（TFM）先驱；SAP 承诺四年投资 <span class="data-highlight">超过 €10 亿</span>（约 $10.9 亿）</p>
+        <p>SAP 以"收购 + 投资"组合方式一次性完成从数据接入（Dremio 联邦查询）到数据理解（Prior Labs TFM）的全栈布局，瞄准 Agentic AI 场景下企业数据碎片化问题。这改变了 ERP 厂商与数据平台厂商的关系图谱——从"合作伙伴"变为"潜在竞争对手"。</p>
+      </div>
+      <div class="impact">
+        <strong>💰 影响：</strong>本周期最重要的资本事件。Snowflake 和 Databricks 都有大量 SAP 客户，此次收购可能改变这些客户的架构决策框架。
+      </div>
+    </div>
+
+    <div class="item">
+      <h3><span class="tag tag-er">【财报预告】</span> Snowflake Q1 FY2027 财报将于 5 月 27 日发布</h3>
+      <div class="source">
+        📎 来源：<a href="https://www.snowflake.com/en/news/press-releases/snowflake-to-announce-q1-fy27-financial-results-may-27-2026/" target="_blank">Snowflake IR</a>
+        &nbsp;| 📅 2026年5月4日（预告）
+      </div>
+      <div class="body">
+        <p><strong>上季度参考（FY2026 Q4）：</strong>产品收入 <span class="data-highlight">$12.3 亿</span>（+30% YoY），RPO <span class="data-highlight">$97.7 亿</span>（+42% YoY）</p>
+        <p>本次为新 CEO Sridhar Ramaswamy 任期内的重要里程碑，市场重点关注 <strong>AI Data Cloud 战略的营收贡献度</strong>。在 SAP 收购 Dremio（潜在分流）和 Databricks Catalog Commits GA（强化治理护城河）背景下，RPO 增速和客户留存率格外关键。</p>
+      </div>
+      <div class="impact">
+        <strong>💰 影响：</strong>Snowflake 财报是数据平台行业风向标。若增速放缓，可能引发"湖仓赛道天花板"新一轮讨论。
+      </div>
+    </div>
   </div>
 
-  <!-- Section E -->
+  <!-- E. Watchlist -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-e">E</span>
-      <h2>Watchlist · 关注列表</h2>
+      <h2>Watchlist — 关注清单（3 条）</h2>
     </div>
 
     <div class="item">
-      <h3>1. <span class="wl-type wl-preview">预告</span> GPT-5.5（代号"Spud"）生态整合进展</h3>
-      <div class="source">📎 参考：<a href="https://github.com/Zijian-Ni/awesome-ai-agents-2026" target="_blank">Awesome AI Agents 2026 (GitHub)</a></div>
+      <h3><span class="tag tag-watch">【跟踪】</span> SAP + Dremio 整合路线图待公布 — 对 Iceberg 生态的影响</h3>
+      <div class="source">📎 来源：SAP News Center · The Register &nbsp;| ⏳ 预计 Q3 交割后明朗化</div>
       <div class="body">
-        GPT-5.5 于4月23日正式发布，定位面向 Agentic 任务的前沿模型（编码/在线研究/数据分析/工具导航）。目前 Databricks 已率先接入托管服务（4月24日）。
-        <br><br>
-        <strong>👀 后续关注：</strong>Snowflake Cortex Analytics 是否跟进支持 GPT-5.5？OpenAI 是否发布更多 Agent 编排相关的官方工具链更新？
-      </div>
-    </div>
-
-    <div class="item">
-      <h3>2. <span class="wl-type wl-track">跟踪</span> Microsoft-OpenAI 协议变更的市场反应</h3>
-      <div class="source">📎 参考：<a href="https://www.cnbc.com/2026/04/27/openai-microsoft-partnership-revenue-cap.html" target="_blank">CNBC</a> | 
-        <a href="https://www.nextplatform.com/ai/2026/04/28/microsoft-and-openai-remain-friends-are-looking-to-hook-up-with-others/5218929" target="_blank">Next Platform 分析</a>
-      </div>
-      <div class="body">
-        协议公布后 Microsoft 股价出现下跌，市场正在消化"失去 OpenAI 独家权"的含义。但对数据平台行业的深层影响尚未充分定价——包括 OpenAI 与 AWS/GCP 的潜在合作是否会改变多云数据架构选择偏好。
-        <br><br>
-        <strong>👀 等待信号：</strong>OpenAI 未来数周是否与其他云厂商签署官方托管协议；AWS/GCP 官方回应或产品动向。
+        <p><strong>关注原因：</strong>SAP 收购后 Dremio 开源项目走向（特别是 Apache Iceberg 贡献策略）尚不明确。SAP 提到将引入基于 <strong>Apache Polaris</strong> 和 Iceberg REST Catalog API 的通用开放目录——Polaris 作为 Snowflake 捐赠给 Apache 的项目，SAP 采用将进一步验证目录层标准化进程。</p>
+        <p><strong>等待信号：</strong>(1) SAP 是否延续 Dremio 对 Iceberg 社区的贡献策略 (2) Polaris Catalog 具体实施方案 (3) 现有 Dremio 云客户服务连续性安排</p>
       </div>
     </div>
 
     <div class="item">
-      <h3>3. <span class="wl-type wl-track">跟踪</span> Google Cloud Next '26 后续产品落地节奏</h3>
-      <div class="source">📎 参考：<a href="https://virtualizationreview.com/articles/2026/04/24/google-cloud-next-26-gemini-enterprise-agent-platform-leads-ai-centric-news.aspx" target="_blank">Virtualization Review</a> | 
-        <a href="https://oplexa.com/google-cloud-next-2026/" target="_blank">Oplexa 全量公告汇总</a>
-      </div>
+      <h3><span class="tag tag-watch">【跟踪】</span> IBM GPU 加速 Presto 引擎规模化落地情况</h3>
+      <div class="source">📎 来源：Think 2026 PR Newswire &nbsp;| ⏳ 目前处于私密预览阶段</div>
       <div class="body">
-        Next '26 公布了大量预览版功能（Data Agent Kit、Spanner Omni、双向联邦查询等）。对企业数据团队而言，关键是这些能力的 <strong>GA 时间表</strong>和<strong>实际性能表现</strong>——尤其是 BigQuery 跨云读取 Databricks/Snowflake 目录的延迟和成本。
-        <br><br>
-        <strong>👀 等待信号：</strong>Google Cloud 发布预览功能的 GA 时间表；第三方 BigQuery 联邦查询性能评测数据。
+        <p><strong>关注原因：</strong>NVIDIA 合作的 GPU 加速 Presto 在雀巢 PoC 中实现 <span class="data-highlight">83% 成本节约 + 30倍性价比提升</span>。若能在大规模生产环境中复制，将从根本上改变湖仓查询经济性——尤其在高频 Agent 查询场景下。</p>
+        <p><strong>等待信号：</strong>(1) 从私密预览转公开预览/GA 时间表 (2) 第三方独立基准测试 (3) 雀巢之外的企业案例</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <h3><span class="tag tag-watch">【跟踪】</span> Anthropic Claude 用量上限大幅提升 + SpaceX 算力合作</h3>
+      <div class="source">📎 来源：<a href="https://www.anthropic.com/news/higher-limits-spacex" target="_blank">Anthropic Official</a>（5月7日）</div>
+      <div class="body">
+        <p><strong>关注原因：</strong>Claude 等 LLM 是数据平台 AI 层的核心推理引擎，其可用性和成本变化直接影响 Mosaic AI / Snowflake Cortex 等 AI-augmented data platform 产品能力。SpaceX 合作暗示算力供给瓶颈可能近期缓解。</p>
+        <p><strong>等待信号：</strong>(1) 具体用量上限提升幅度 (2) SpaceX 合作规模和时间表 (3) 对数据平台 AI 服务定价传导效应</p>
       </div>
     </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief Skill · Automation ai-2</p>
-    <p>生成时间：2026-04-29 16:30 CST · 本日报由 AI 采集编写，仅供信息参考，不构成投资建议或技术选型推荐</p>
+    <p>信息截至北京时间 2026-05-09 08:00 CST · 仅供信息参考，不构成投资建议或技术选型推荐</p>
   </div>
 
 </div>
